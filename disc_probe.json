@@ -1,0 +1,31 @@
+{
+  "cue_path": "I:\\Projects\\PSX-Ports-pilot\\_disc\\dragon-ball-z-ultimate-battle-22\\Dragon Ball Z - Ultimate Battle 22 (Europe).cue",
+  "cue_name": "Dragon Ball Z - Ultimate Battle 22 (Europe).cue",
+  "bin_name": "Dragon Ball Z - Ultimate Battle 22 (Europe).bin",
+  "track_count": 1,
+  "data_track_size": 335562192,
+  "data_track_md5": "ddb7a6e3d9f9dda0e5295576e7d95d8b",
+  "data_track_sha1": "2bc030896e91290407f9f80446197a7e5e3eebca",
+  "data_track_crc32": "92a3adf5",
+  "boot_exe": "SLES_037.36",
+  "serial": "SLES-03736",
+  "serial_exe": "SLES_037.36",
+  "volume_id": "DBZULTIMATE22",
+  "display_name": "Dragon Ball Z: Ultimate Battle 22",
+  "load_address": "0x800F0000",
+  "entry_pc": "0x800F24CC",
+  "text_size": "0x00018800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "2232ae68d0e3451429a7bc897a83ca22077c5dc3258ba8dd9c9524f0c69dbc3e",
+  "boot_exe_sha256": "37a2dde4683a7bb536035efabcc4d6d030c657059fb614d7bcd8447e7541d699",
+  "seed_count": 259,
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

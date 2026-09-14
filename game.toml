@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Dragon Ball Z: Ultimate Battle 22"
+id = "SLES-03736"
+players = 2
+exe = "disc/SLES_037.36"
+disc = "disc/Dragon Ball Z - Ultimate Battle 22 (Europe).cue"
+load_address = "0x800F0000"
+entry_pc = "0x800F24CC"
+text_size = "0x00018800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Dragon Ball Z - Ultimate Battle 22 (Europe).bin"
+cue_name = "Dragon Ball Z - Ultimate Battle 22 (Europe).cue"
+boot_exe = "SLES_037.36"
+known_sizes = [335562192]
+known_md5 = [
+  "ddb7a6e3d9f9dda0e5295576e7d95d8b",
+]
+known_sha1 = [
+  "2bc030896e91290407f9f80446197a7e5e3eebca",
+]
+known_crc32 = [
+  "92a3adf5",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Dragon Ball Z: Ultimate Battle 22 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "2232ae68d0e3451429a7bc897a83ca22077c5dc3258ba8dd9c9524f0c69dbc3e"
